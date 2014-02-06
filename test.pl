@@ -2,6 +2,8 @@
 
 use strict;
 
+my $winpid = $^O eq 'cygwin' ? Cygwin::pid_to_winpid($$) : $$;
+
 my @tests = (
 	"EnumProcesses",
 	"EnumProcessModules",
@@ -51,8 +53,8 @@ sub TestEnumProcessModules {
 
 	use Win32API::Process ':All';
 
-	$handle = OpenProcess(PROCESS_ALL_ACCESS, 0, $$);
-	croak "  OpenProcess(PROCESS_ALL_ACCESS, 0, $$) returned \"$handle\"";
+	$handle = OpenProcess(PROCESS_ALL_ACCESS, 0, $winpid);
+	croak "  OpenProcess(PROCESS_ALL_ACCESS, 0, $winpid) returned \"$handle\"";
 	if ($handle == 0) { return 0; }
 
 	$result = EnumProcessModules($handle, $handles);
@@ -98,8 +100,8 @@ sub TestGetModuleBaseName {
 
 	use Win32API::Process ':All';
 
-	$handle = OpenProcess(PROCESS_ALL_ACCESS, 0, $$);
-	croak "  OpenProcess(PROCESS_ALL_ACCESS, 0, $$) returned \"$handle\"";
+	$handle = OpenProcess(PROCESS_ALL_ACCESS, 0, $winpid);
+	croak "  OpenProcess(PROCESS_ALL_ACCESS, 0, $winpid) returned \"$handle\"";
 	if ($handle == 0) { return 0; }
 
 	$result = EnumProcessModules($handle, $handles);
@@ -123,8 +125,8 @@ sub TestGetModuleFileNameEx {
 
 	use Win32API::Process ':All';
 
-	$handle = OpenProcess(PROCESS_ALL_ACCESS, 0, $$);
-	croak "  OpenProcess(PROCESS_ALL_ACCESS, 0, $$) returned \"$handle\"";
+	$handle = OpenProcess(PROCESS_ALL_ACCESS, 0, $winpid);
+	croak "  OpenProcess(PROCESS_ALL_ACCESS, 0, $winpid) returned \"$handle\"";
 	if ($handle == 0) { return 0; }
 
 	$result = EnumProcessModules($handle, $handles);
@@ -148,8 +150,8 @@ sub TestGetModuleInformation {
 
 	use Win32API::Process ':All';
 
-	$handle = OpenProcess(PROCESS_ALL_ACCESS, 0, $$);
-	croak "  OpenProcess(PROCESS_ALL_ACCESS, 0, $$) returned \"$handle\"";
+	$handle = OpenProcess(PROCESS_ALL_ACCESS, 0, $winpid);
+	croak "  OpenProcess(PROCESS_ALL_ACCESS, 0, $winpid) returned \"$handle\"";
 	if ($handle == 0) { return 0; }
 
 	$result = EnumProcessModules($handle, $handles);
