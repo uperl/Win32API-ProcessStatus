@@ -1,5 +1,5 @@
-Win32API/ProcessStatus version 0.01
-===================================
+Win32API/ProcessStatus
+======================
 
 The ProcessStatus helper functions make it easier for you to obtain
 information about processes.
@@ -15,31 +15,26 @@ implemented in this module (in the meanwhile).
 These functions are available in Psapi.dll, which is included
 in Windows 2000 or higher. To use these functions on Windows NT, you must
 obtain the redistributable version of this DLL. It is not included
-in Windows 95 or higher. See the module Win32API::ToolHelp for the similar
-functionality for Windows 95 or higher.
+in Windows 9x.  See the module Win32API::ToolHelp for the similar
+functionality for Windows 9x.
 
 INSTALLATION
 
 To install this module from the sources type the following:
 
    perl Makefile.PL
-   nmake
-   nmake test
-   nmake install
+   dmake
+   dmake test
+   dmake install
 
-If you are user of ActivePerl build 6xx you can alternatively run
-the packaging script and then install this module via the package
-manager (it is the preffered way, by the way):
-
-   build
-   cd package
-   ppm install Win32API-ProcessStatus.ppd
+If your Perl is configured to use nmake you will need to use nmake
+instead of dmake.
 
 DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-   build of Perl 5.6.1 for Win32
+   build of Perl 5.6.1 for Win32 or Cygwin
    Exporter
    DynaLoader
 

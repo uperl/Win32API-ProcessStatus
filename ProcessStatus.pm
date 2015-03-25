@@ -94,7 +94,7 @@ implemented in this module (in the meanwhile).
 These functions are available in Psapi.dll, which is included
 in Windows 2000 or higher. To use these functions on Windows NT, you must
 obtain the redistributable version of this DLL. It is not included
-in Windows 95 or higher. See the module Win32API::ToolHelp for the similar
+in Windows 95 or higher. See the module L<Win32API::ToolHelp> for the similar
 functionality for Windows 95 or higher.
 
 (Note that much of the following documentation refers to the behavior
@@ -176,7 +176,7 @@ or reset the internally stored error code explicitely by the function
 C<SetLastProcessStatusError>.
 
 To use something more convenient than numbers for comparisons of return
-values and error codes see the module C<Win32API::Const>.
+values and error codes see the module L<Win32API::Const>.
 
 There are couple of functions that are implemented as ANSI versions
 on Windows 95 or higher and as both ANSI and Unicode versions on Windows 2000
@@ -288,7 +288,7 @@ by calling the C<SetLastProcessStatusError> function if they fail.
 To obtain an error string for system error codes, use
 the C<FormatMessage> function. For a complete list of error codes, see
 the System Error Codes section in MSDN. There are pre-defined constants
-for the Win32 system error codes in the module <Win32API::Const>.
+for the Win32 system error codes in the module L<Win32API::Const>.
 
 You should call the C<GetLastProcessStatusError> function immediately when
 a function's return value indicates that such a call will return useful data.
