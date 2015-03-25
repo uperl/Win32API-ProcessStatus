@@ -25,10 +25,23 @@ WriteMakefile(
 	},			# e.g., Module::Name => 1.1
 	($] >= 5.005 ?				# Add these new keywords supported since 5.005
 		(ABSTRACT_FROM	=> 'ProcessStatus.pm',	# retrieve abstract from module
-		AUTHOR		=> 'Ferdinand Prantl <prantl@host.sk>') : ()
+		AUTHOR		=> [ 'Ferdinand Prantl <prantl@host.sk>', 'Graham Ollis <plicease@cpan.org>' ]) : ()
 	),
 	'LIBS'		=> $LIBS,		# e.g., '-lm'
 	'DEFINE'	=> '',			# e.g., '-DHAVE_SOMETHING'
 	'INC'		=> '',			# e.g., '-I/usr/include/other'
 	'LDDLFLAGS'     => $LDDLFLAGS,
+        ( $ExtUtils::MakeMaker::VERSION ge '6.46' ? (
+                META_MERGE => {
+                        'meta-spec' => { version => 2 },
+                        'resources' => {
+                                repository => {
+                                  type => "git",
+                                  url  => "git://github.com/plicease/Win32API-ProcessStatus.git",
+                                  web  => "https://github.com/plicease/Win32API-ProcessStatus",
+                                },
+                        },
+                        bugtracker => "http://github.com/plicease/Win32API-ProcessStatus/issuese",                        
+                },
+        ) : () ),
 );

@@ -424,10 +424,9 @@ for a function failure.
 
 =head1 AUTHOR
 
-Ferdinand Prantl E<lt>F<prantl@host.sk>E<gt>
+Original Author: Ferdinand Prantl E<lt>F<prantl@host.sk>E<gt>
 
-See F<http://prantl.host.sk/perl/modules/Win32API/ProcessStatus>
-for the most recent version.
+Current Maintainer: Graham Ollis E<lt>plicease@cpan.orgE<gt>
 
 =head1 COPYRIGHT
 
