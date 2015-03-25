@@ -297,7 +297,7 @@ and C<GetLastProcessStatusError> would return its error code instead
 of the former one.
 
 Function failure is typically indicated by a return value such as zero,
-undefined, or –1 (0xffffffff).
+undefined, or -1 (0xffffffff).
 
 Error codes returned are 32-bit values with the most significant bit set
 to 1 (bit 31 is the most significant bit). Zero code is C<ERROR_SUCCESS>.
