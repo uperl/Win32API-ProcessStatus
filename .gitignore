@@ -1,0 +1,10 @@
+/MYMETA.json
+/MYMETA.yml
+/Makefile
+*.old
+/ProcessStatus.bs
+/ProcessStatus.c
+/ProcessStatus.o
+/blib
+/pm_to_blib
+*.bak

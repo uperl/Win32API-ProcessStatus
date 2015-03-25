@@ -1,14 +1,14 @@
 buffers.h
 build.bat
-clean.bat
 Changes
+clean.bat
 Makefile.PL
 MANIFEST
 package/README
 package/Win32API-ProcessStatus.ppd
-README
-test.pl
 ProcessStatus.html
 ProcessStatus.pm
 ProcessStatus.xs
+README
+test.pl
 typemap
