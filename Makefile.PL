@@ -1,14 +1,22 @@
+use strict;
+use warnings;
 use ExtUtils::MakeMaker;
 use Config;
 
 my $LIBS = [];
 my $LDDLFLAGS = "$Config{lddlflags}";
 
+unless($^O =~ /^(cygwin|MSWin32)$/)
+{
+  print "OS Unsupported\n";
+  exit;
+}
+
 if($^O eq 'cygwin')
 {
   $LIBS = [ '-L/usr/lib/w32api/ -lpsapi' ];
 }
-elsif($^O eq 'MSWin32' && $Config{cc} =~ /cl(\.exe)?$/)
+elsif($^O eq 'MSWin32' && $Config{ccname} eq 'cl')
 {
   $LDDLFLAGS .= ' psapi.lib';
 }
