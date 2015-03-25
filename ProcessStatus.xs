@@ -6,9 +6,6 @@
 #include <windows.h>
 #include <Psapi.h>
 
-#undef XS_VERSION
-#define XS_VERSION "0.01"
-
 #ifndef DEBUG_WIN32API_PROCESSSTATUS
 # define Debug(list) /*Nothing*/
 #else
