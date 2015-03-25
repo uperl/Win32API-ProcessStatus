@@ -1,5 +1,10 @@
 Revision history for Perl extension Win32API::ProcessStatus.
 
+0.02  2015-03-25
+  - Add Win32API::Process as an explicit dependency
+  - Add support for cygwin
+  - Fix Documentation (POD) error
+
 0.01  Sun Jul 14 11:18:03 2002
 	* original version; created by h2xs 1.21 with options
 		-A -n Win32API::ProcessStatus
