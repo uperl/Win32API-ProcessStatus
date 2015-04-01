@@ -48,8 +48,8 @@ WriteMakefile(
                                   url  => "git://github.com/plicease/Win32API-ProcessStatus.git",
                                   web  => "https://github.com/plicease/Win32API-ProcessStatus",
                                 },
+                                bugtracker => "http://github.com/plicease/Win32API-ProcessStatus/issuese",                         
                         },
-                        bugtracker => "http://github.com/plicease/Win32API-ProcessStatus/issuese",                        
                 },
         ) : () ),
 );
