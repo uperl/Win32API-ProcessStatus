@@ -1,5 +1,9 @@
 Revision history for Perl extension Win32API::ProcessStatus.
 
+0.04  2015-04-01^M
+  - Fixed meta data for bug tracker (thanks karenetheridge gh#1, mishin gh#2)
+  - Not an April Fools release
+
 0.03  2015-03-25
   - Do not attempt install on non-Windows systems
 

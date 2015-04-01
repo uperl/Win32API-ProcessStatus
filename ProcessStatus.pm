@@ -9,7 +9,7 @@ require DynaLoader;
 
 our @ISA = qw(Exporter DynaLoader);
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 # Items to export into callers namespace by default. Note: do not export
 # names by default without a very good reason. Use EXPORT_OK instead.
