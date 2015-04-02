@@ -2,8 +2,6 @@ buffers.h
 Changes
 Makefile.PL
 MANIFEST
-package/README
-package/Win32API-ProcessStatus.ppd
 lib/Win32API/ProcessStatus.pm
 ProcessStatus.xs
 README
