@@ -43,6 +43,11 @@ jobs:
           perl -V
           perl -V:make
 
+      - name: Install Prereqs
+        run:
+          cpan App::cpanminus
+          cpanm -n Win32API::Process
+
       - name: Run Tests
         run: |
           perl Makefile.PL
